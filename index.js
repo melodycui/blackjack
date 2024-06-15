@@ -73,7 +73,6 @@ function renderGame() {
     } else if (sum === 21) {
         message = "blackjack!"
         hasBlackJack = true
-        player.chips += price*2
         endGame()
     } else {
         message = "loser boo"
@@ -113,15 +112,15 @@ function endGame() {
         dealerGoes()
         if (dealerSum > 21) {
             dealer.innerText += " dang it"
-            player.chips += price*2
+            //player.chips += price*2
         } else if (dealerSum > sum) {
             dealer.innerText += " boo you suck"
         } else if (dealerSum < sum) {
             dealer.innerText +=  " okay fine you win"
-            player.chips += price*2
+            //player.chips += price*2
         } else {
             dealer.innerText += " tie!"
-            player.chips += price
+            //player.chips += price
         }
     } 
     start = false
